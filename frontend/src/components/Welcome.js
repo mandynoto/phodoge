@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import '../css/app.css'
+import '../css/splash.css'
 
 const Welcome = () => {
   return (
