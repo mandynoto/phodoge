@@ -6,12 +6,15 @@ from flask import Flask, request
 
 UNSPLASH_URL = "https://api.unsplash.com/photos/random"  # is Unsplash API base URL
 
-load_dotenv(dotenv_path="./.env.local")  # loads environment variables
-UNSPLASH_KEY = os.environ.get("UNSPLASH_KEY", "")  # gets Unsplash API key from above
+load_dotenv(dotenv_path="./.env.local")  # loads environment variables (envs)
+
+DEBUG = bool(os.environ.get("DEBUG", True))  # enables Flask debug mode by default
+UNSPLASH_KEY = os.environ.get("UNSPLASH_KEY", "")  # gets Unsplash API key from envs
 if not UNSPLASH_KEY:  # raises an error if UNSPLASH_KEY is empty
     raise EnvironmentError("Please create a .env.local file with UNSPLASH_KEY")
 
 app = Flask(__name__)  # Instantiates a Flask application
+app.config["DEBUG"] = DEBUG
 
 # Define a Flask route for "/new-image" to retrieve images based on a query
 @app.route("/new-image")
