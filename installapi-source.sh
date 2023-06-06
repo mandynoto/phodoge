@@ -76,6 +76,12 @@ install_project() {
 		read -r dummy
 		return 1
 	}
+	pipenv install --python "$python_version" flask-cors --dev || {
+		echo "Failed to install project dependencies."
+		echo "Press enter to continue"
+		read -r dummy
+		return 1
+	}
 
 	echo "Setup complete! You can now start working on the project."
 }

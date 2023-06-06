@@ -3,6 +3,7 @@ import os
 import requests
 from dotenv import load_dotenv
 from flask import Flask, request
+from flask_cors import CORS
 
 UNSPLASH_URL = "https://api.unsplash.com/photos/random"  # is Unsplash API base URL
 
@@ -13,7 +14,9 @@ UNSPLASH_KEY = os.environ.get("UNSPLASH_KEY", "")  # gets Unsplash API key from 
 if not UNSPLASH_KEY:  # raises an error if UNSPLASH_KEY is empty
     raise EnvironmentError("Please create a .env.local file with UNSPLASH_KEY")
 
-app = Flask(__name__)  # Instantiates a Flask application
+app = Flask(__name__)  # instantiates a Flask application
+CORS(app)  # enables Cross-Origin Resource Sharing (CORS) for the Flask app
+
 app.config["DEBUG"] = DEBUG
 
 # Define a Flask route for "/new-image" to retrieve images based on a query
