@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Specify the desired Python version
-python_version="3.10.4"
+python_version="3.10.11"
 
 install_project() {
 	# Check if the right version of Python is installed
