@@ -1,11 +1,28 @@
-version: '3.8'
-services:
-    frontend:
-        # Specify location of Dockerfile in frontend directory
-        build: ./frontend
-        ports:
-            - '3000:3000'
-    api:
-        build: ./api
-        ports:
-            - '5050:5050'
+# Docker Compose file for a web application.
+
+# This configuration file will setup two services: a frontend and an api service.
+# Each service has its own Dockerfile for build instructions,
+# and they both run continuously due to the "restart: always" setting.
+# They both expose their respective ports and have file synchronization set up.
+# Environment variable in the frontend service is for enabling polling.
+
+version: '3.8' # is the version of Docker Compose file syntax being used
+
+services: # defines the different components of your application
+    frontend: #defines name of frontend service
+        restart: always #  ensures service always restarts if it stops or crashes
+        build: ./frontend # is path to Dockerfile for frontend service
+        ports: # specifies port mappings between docker host and frontend service
+            - '3000:3000' # maps port 3000 on the host to port 3000 on the service
+        volumes: # defines directories the service can access on the host system
+            - /app/node_modules # specifies a volume that Docker should not synchronize
+            - ./frontend:/app # maps local frontend directory to /app directory in service
+        environment: # defines any environment variables for the frontend service
+            - CHOKIDAR_USEPOLLING=true # is useful when running inside a VM for syncing
+    api: # defines name of API service
+        restart: always # ensures  service always restarts if it stops or crashes
+        build: ./api # is path to Dockerfile for  API service
+        ports: # specifies port mappings between  docker host and API service
+            - '5050:5050' # maps port 5050 on host to port 5050 on service
+        volumes: # defines the directories that the API service can access on the host system
+            - ./api:/app # maps local api directory to /app directory in the service
