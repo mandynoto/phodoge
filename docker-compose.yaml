@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    frontend:
+        # Specify location of Dockerfile in frontend directory
+        build: ./frontend
+        ports:
+            - '3000:3000'
+    api:
+        build: ./api
+        ports:
+            - '5050:5050'
