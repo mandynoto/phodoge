@@ -19,6 +19,7 @@ CORS(app)  # enables Cross-Origin Resource Sharing (CORS) for the Flask app
 
 app.config["DEBUG"] = DEBUG
 
+
 # Define a Flask route for "/new-image" to retrieve images based on a query
 @app.route("/new-image")
 def new_image():
