@@ -2,8 +2,12 @@ import os
 
 import requests
 from dotenv import load_dotenv
-from flask import Flask, request
+from flask import Flask, jsonify, request
 from flask_cors import CORS
+from mongo_client import mongo_client
+
+gallery = mongo_client.gallery
+images_collection = gallery.images
 
 UNSPLASH_URL = "https://api.unsplash.com/photos/random"  # is Unsplash API base URL
 
@@ -44,6 +48,21 @@ def new_image():
     data = response.json()  # extracts JSON data from response
 
     return data  # that is, the JSON data from Unsplash API
+
+
+@app.route("/images", methods=["GET", "POST"])
+def images():
+    if request.method == "GET":  # , read images from database
+        images = images_collection.find({})
+        return jsonify([img for img in images])
+    elif request.method == "POST":  # , save image in database
+        image = request.get_json()
+        image["_id"] = image.get("id")
+        result = images_collection.insert_one(image)
+        inserted_id = result.inserted_id
+        return {"inserted_id": inserted_id}
+    else:
+        return jsonify({"error": "Method not allowed"}), 405
 
 
 if __name__ == "__main__":  # means that when this script is run directly,
