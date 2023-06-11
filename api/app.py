@@ -65,6 +65,18 @@ def images():
         return jsonify({"error": "Method not allowed"}), 405
 
 
+@app.route("/images/<image_id>", methods=["DELETE"])  # type: ignore
+def image(image_id: str):
+    if request.method == "DELETE":
+        # delete image from database
+        res = images_collection.delete_one(filter={"_id": image_id})
+        if not res:
+            return {"error": "Image was not deleted. Please try again"}, 500
+        if not res.deleted_count:
+            return {"error": "image not found"}, 404
+        return {"deleted_id": image_id}
+
+
 if __name__ == "__main__":  # means that when this script is run directly,
     # run the Flask app on all available network interfaces at port 5050
     app.run(host="0.0.0.0", port=5050)
