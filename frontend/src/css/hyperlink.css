@@ -1,0 +1,12 @@
+.blue-link {
+  color: #0070c9;
+}
+
+.blue-link:hover {
+  color: #0070c9;
+  text-decoration: underline;
+}
+
+.blue-link:active {
+  color: #005cb5;
+}
