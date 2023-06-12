@@ -61,8 +61,7 @@ def images():
         result = images_collection.insert_one(image)
         inserted_id = result.inserted_id
         return {"inserted_id": inserted_id}
-    else:
-        return jsonify({"error": "Method not allowed"}), 405
+    return jsonify({"error": "Method not allowed"}), 405
 
 
 @app.route("/images/<image_id>", methods=["DELETE"])  # type: ignore
