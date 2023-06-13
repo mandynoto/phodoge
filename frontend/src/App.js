@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { useEffect, useState } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import Header from './components/Header'
-import Search from './components/Search'
 import ImageCard from './components/ImageCard'
-import Welcome from './components/Welcome'
+import Search from './components/Search'
 import Spinner from './components/Spinner'
-import { Container, Row, Col } from 'react-bootstrap'
+import Welcome from './components/Welcome'
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5050'
 

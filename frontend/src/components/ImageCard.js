@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, Nav } from 'react-bootstrap'
+import { Button, Card, Nav } from 'react-bootstrap'
 import '../css/hyperlink.css'
 
 const ImageCard = ({ image, deleteImage, saveImage }) => {
