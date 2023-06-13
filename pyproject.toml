@@ -1,0 +1,3 @@
+[tool.black]
+allow-single-line-ifs = true
+[tool.isort]
