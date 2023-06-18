@@ -1,8 +1,17 @@
-# pho2oos
+# phodoge
 
 Find and save photos
 
 ![preview](assets/demo.gif)
+
+## Contents
+
+- [Framework](#framework)
+- [Usage](#usage)
+
+### Framework
+
+Full stack application based on React and Python Flask
 
 ## Usage
 

@@ -5,8 +5,8 @@ import '../css/splash.css'
 const Welcome = () => {
   return (
     <div className="splash">
-      <h1>pho2oos</h1>
-      <p>Share photos</p>
+      <h1>phodoge</h1>
+      <p>Find and save photos</p>
       <p>
         <Button variant="primary" href="https://unsplash.com" target="_blank">
           Learn more
