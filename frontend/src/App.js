@@ -82,7 +82,7 @@ const App = () => {
 
   return (
     <div>
-      <Header title="phodoge" />
+      <Header title="" />
       {loading ? (
         <Spinner />
       ) : (
