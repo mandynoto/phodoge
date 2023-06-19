@@ -3,6 +3,7 @@
 Find and save photos
 
 ![preview](assets/demo.gif)
+Logo created with [kittl](https://www.kittl.com)
 
 ## Contents
 
