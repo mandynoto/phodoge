@@ -4,7 +4,6 @@ Find and save photos
 
 ![preview](assets/demo.gif)
 Logo created with [kittl](https://www.kittl.com)
-<p><small><a href="https://www.kittl.com">Logo created with kittl</a></small></p>
 
 ## Contents
 
