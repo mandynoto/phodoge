@@ -1,6 +1,18 @@
-# phodoge
+<div align="center">
+
+# Phodoge
 
 Find and save photos
+
+</div>
+
+<p align="center">
+  <img src="/frontend/src/images/logo.svg" alt="Logo" width="200px">
+</p>
+
+<p align="center">
+  <small><a href="https://www.kittl.com">Logo created with kittl</a></small>
+</p>
 
 ![preview](assets/demo.gif)
 
@@ -13,7 +25,7 @@ Find and save photos
 
 Full stack application based on React and Python Flask
 
-## Usage
+### Usage
 
 1. docker-compose up
 2. Type and enter in your browser http://localhost:3000
