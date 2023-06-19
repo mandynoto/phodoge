@@ -17,7 +17,7 @@ Find and save photos
 
 Full stack application based on React and Python Flask
 
-## Usage
+### Usage
 
 1. docker-compose up
 2. Type and enter in your browser http://localhost:3000
