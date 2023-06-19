@@ -11,7 +11,7 @@ Find and save photos
 </p>
 
 <p align="center">
-  <small><a href="https://www.kittl.com">Logo created with kittl</a></small>
+  Logo <small><a href="https://www.kittl.com">Created with kittl</a></small>
 </p>
 
 ![preview](assets/demo.gif)

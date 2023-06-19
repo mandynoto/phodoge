@@ -26,8 +26,9 @@ const Footer = () => {
           style={{ width: '12px', height: '24px', marginRight: '5px' }}
         />
         <p style={{ margin: '0', fontSize: '8px', color: '#8c8c8c' }}>
+          Logo&nbsp;
           <a href="https://www.kittl.com" className="footer-link">
-            Logo created with www.kittl.com
+            Created with www.kittl.com
           </a>
         </p>
       </div>
