@@ -1,8 +1,10 @@
-# ![Logo](/frontend/src/images/logo.svg) phodoge
-
-Find and save photos
+# <img src="/frontend/src/images/logo.svg" alt="Logo" width="200px">
 
 Logo created with [kittl](https://www.kittl.com)
+
+# Phodoge
+
+Find and save photos
 
 ![preview](assets/demo.gif)
 
