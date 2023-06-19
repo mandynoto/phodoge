@@ -9,6 +9,7 @@ import ImageCard from './components/ImageCard'
 import Search from './components/Search'
 import Spinner from './components/Spinner'
 import Welcome from './components/Welcome'
+import Footer from './components/Footer'
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5050'
 
@@ -112,6 +113,7 @@ const App = () => {
         </>
       )}
       <ToastContainer position="top-right" hideProgressBar theme="colored" />
+      <Footer />
     </div>
   )
 }
