@@ -4,14 +4,14 @@
 
 Find and save photos
 
+<p align="center">
+  Logo <small><a href="https://www.kittl.com">Created with kittl</a></small>
+</p>
+
 </div>
 
 <p align="center">
   <img src="/frontend/src/images/logo.svg" alt="Logo" width="200px">
-</p>
-
-<p align="center">
-  Logo <small><a href="https://www.kittl.com">Created with kittl</a></small>
 </p>
 
 ![preview](assets/demo.gif)
